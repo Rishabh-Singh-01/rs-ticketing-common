@@ -1,6 +1,15 @@
 import { NextFunction, Request, Response } from 'express';
 import { CustomError } from '../errors/custom-error';
 
+/**
+ * Global Error Handler middleware, handles error to return a consistent response
+ *
+ * @param err
+ * @param req
+ * @param res
+ * @param next
+ * @returns
+ */
 export const errorHandler = (
   err: Error,
   req: Request,
@@ -14,6 +23,8 @@ export const errorHandler = (
     });
   }
 
+  console.log('------------Error from errorHandler-----------');
+  console.error(err);
   res.status(500).send({
     status: 'error',
     errors: [

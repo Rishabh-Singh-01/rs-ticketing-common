@@ -18,6 +18,16 @@ declare global {
   }
 }
 
+/**
+ * checks whether currentUser exists or not by verifying jwt session on cookie,
+ * if cookie is valid append email and id on req.currentUser
+ * else req.currentUser remains null
+ *
+ * @param req : General Express Request
+ * @param res : General Express Response
+ * @param next : General Express Next Function
+ * @returns
+ */
 export const currentUser = (
   req: Request,
   res: Response,

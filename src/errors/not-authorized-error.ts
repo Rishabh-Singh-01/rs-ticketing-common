@@ -1,5 +1,9 @@
 import { CustomError } from './custom-error';
 
+/**
+ * Error thrown when authorization fails
+ * statusCode: 402
+ */
 export class NotAuthorizedError extends CustomError {
   _statusCode = 401;
 

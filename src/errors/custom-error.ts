@@ -1,3 +1,6 @@
+/**
+ * Custom Error class to create or extend some more specific errors
+ */
 export abstract class CustomError extends Error {
   protected abstract _statusCode: number;
 
