@@ -2,11 +2,20 @@
   "name": "@rs-ticketing/common",
   "version": "0.0.1",
   "description": "Common modules for ticketing project",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc"
   },
   "keywords": [],
   "author": "rishabh-singh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "typescript": "^5.3.2"
+  }
 }
