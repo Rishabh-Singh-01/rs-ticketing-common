@@ -5,7 +5,7 @@ import { CustomEvent } from '../utils/custom-event';
  * Abstract class to publish custom events to a certain subject or channel in nats streaming server
  */
 export abstract class Publisher<T extends CustomEvent> {
-  abstract subject: T['data'];
+  abstract subject: T['subject'];
   private client: Stan;
 
   constructor(client: Stan) {
